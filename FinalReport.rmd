@@ -42,11 +42,19 @@ barchartGC(~infected + treatment,data=females)
 barchartGC(~infected + treatment,data=females, type="percent")
 
 ```
+
 According to the plot it looks like the treatment makes females want to do things that lead to them getting sick.
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=females)
+rowPerc(table1)
+colPerc(table1)
+```
+three fifths of thw women who got aids had taken the drug which tells us that the drug is ineffective at preventing aids.  
 
 ## Inferential Results
 
